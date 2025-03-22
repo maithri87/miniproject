@@ -14,39 +14,7 @@
 .animated-text {
     animation: fade 2s ease-in-out infinite alternate;
 }
-
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f8f9fa;
-    }
-
-    h1 {
-        color: #4a90e2;
-        font-weight: bold;
-    }
-
-    .navbar {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-        background-color: #e9ecef;
-        color: #6c757d;
-    }
-
-    .list-group-item {
-        background-color: #ffffff;
-        border: 1px solid #e3e6eb;
-        transition: background-color 0.2s ease;
-    }
-
-    .list-group-item:hover {
-        background-color: #f8f9fa;
-    }
-
-</style>
-
-
+    </style>
 </head>
 <body>
     <div class="container">
@@ -62,59 +30,40 @@
                 <button class="menu-item"><img src="https://img.icons8.com/ios-filled/50/000000/like.png" alt="Liked Songs Icon">Liked Songs</button>
                 <button class="menu-item"><img src="https://img.icons8.com/ios-filled/50/000000/bookmark-ribbon.png" alt="Saved Songs Icon">Saved Songs</button>
                 <button class="menu-item"><img src="https://img.icons8.com/ios-filled/50/000000/musical-notes.png" alt="Genres Icon">Genres</button>
-                <button class="menu-item"><img src=" https://img.icons8.com/ios-filled/50/000000/musical-library.png" alt="Playlists Icon">Playlists</button>
+                <!-- <button class="menu-item"><img src=" https://img.icons8.com/ios-filled/50/000000/musical-library.png" alt="Playlists Icon">Playlists</button> -->
             </nav>
         </aside>
-        
+
         <!-- Main Content -->
         <main class="main-content">
-            <!-- <h1 class="animated-text"><b>Play what moves you</b></h1> -->
-            <!-- <div class="settings"> -->
+            <h1 class="animated-text"><b>Play what moves you</b></h1>
+            <div class="settings">
                 <!-- <h2>Personalized Dashboard</h2>
                 <button class="edit-btn">Edit</button> -->
-            <!-- </div> -->
-            <!-- <div class="search-container">
+            </div>
+            <div class="search-container">
                 <input type="text" class="search-bar" placeholder="Search by genre, artist, album, or mood...">
                 <img src="search-icon.png" alt="Search" class="search-icon">
-            </div> -->
-            <div class="container my-5">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3">
-                        <h1 class="text-center mb-4">Find Your Next Favorite Song</h1>
-                        <form method="POST" action="/recommend">
-                            <div class="mb-3">
-                                <label for="songName" class="form-label">Enter Song Name:</label>
-                                <img src="search-icon.png" alt="Search" class="search-icon">
-                                <input type="text" class="form-control" id="songName" name="song_name" placeholder="Song Name"
-                                    required>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Get Recommendations</button>
-                        </form>
-                    </div>
-                </div>
+        
             </div>
-
-
-
-
-            <!-- <div class="container">
-                {% if recommendations %}
+            <div class="container">
+                <!-- {% if recommendations %} -->
                 <h2 class="text-center mt-5">Recommended Songs</h2>
-                <div class="row">
+                <!-- <div class="row"> -->
                     <div class="col-md-8 offset-md-2">
                         <ul class="list-group">
-                            {% for song in recommendations %}
+                            <!-- {% for song in recommendations %} -->
                             <li class="list-group-item">
-                                <strong>{{ song.name }}</strong> by {{ song.artists }} ({{ song.year }})
+                                <!-- <strong>{{ song.name }}</strong> by {{ song.artists }} ({{ song.year }}) -->
                             </li>
-                            {% endfor %}
+                            <!-- {% endfor %} -->
                         </ul>
                     </div>
-                </div>
-                {% endif %}
+                <!-- </div> -->
+                <!-- {% endif %} -->
             </div>
-         -->
-           
+        
+
             <!-- Recommendation Cards -->
             <div class="cards">
                 <div class="card for-you"><h3>For You</h3></div>
@@ -126,13 +75,10 @@
             <!-- Trending Section -->
             <h2>Trending Music</h2>
             <div class="cards">
-                <div class="card"><h3>Trending Songs</h3></div>
-                <div class="card"><h3>Top Albums</h3></div>
-                <div class="card"><h3>Popular Playlists</h3></div>
+                <div class="card trending"><h3>Trending Songs</h3></div>
+                <div class="card top"><h3>Top Albums</h3></div>
+                <div class="card pop"><h3>Popular Playlists</h3></div>
             </div>
-             <footer class="bg-light text-center py-3 mt-5">
-                <p>&copy; 2025 Song Recommender. All rights reserved.</p>
-            </footer>
         </main>
     </div>
 </body>
