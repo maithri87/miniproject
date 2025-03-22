@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animated-text {
+    animation: fade 2s ease-in-out infinite alternate;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <!-- <img src="user.png" alt="User" class="profile-pic"> -->
+                <h2>HIVE</h2>
+            </div>
+            <nav class="menu">
+                <button class="menu-item"><img src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="Home Icon">Home</button>
+                <button class="menu-item"><img src="https://img.icons8.com/ios-filled/50/000000/clock.png" alt="Listening History Icon">Listening History</button>
+                <button class="menu-item"><img src="https://img.icons8.com/ios-filled/50/000000/like.png" alt="Liked Songs Icon">Liked Songs</button>
+                <button class="menu-item"><img src="https://img.icons8.com/ios-filled/50/000000/bookmark-ribbon.png" alt="Saved Songs Icon">Saved Songs</button>
+                <button class="menu-item"><img src="https://img.icons8.com/ios-filled/50/000000/musical-notes.png" alt="Genres Icon">Genres</button>
+                <button class="menu-item"><img src=" https://img.icons8.com/ios-filled/50/000000/musical-library.png" alt="Playlists Icon">Playlists</button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1 class="animated-text"><b>Play what moves you</b></h1>
+            <div class="settings">
+                <!-- <h2>Personalized Dashboard</h2>
+                <button class="edit-btn">Edit</button> -->
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search by genre, artist, album, or mood...">
+                <img src="search-icon.png" alt="Search" class="search-icon">
+            </div>
+
+            <!-- Recommendation Cards -->
+            <div class="cards">
+                <div class="card for-you"><h3>For You</h3></div>
+                <div class="card top-picks"><h3>Top Picks</h3></div>
+                <div class="card favorites"><h3>Similar to Your Favorites</h3></div>
+                <div class="card recent-plays"><h3>Based on Recent Plays</h3></div>
+            </div>
+
+            <!-- Trending Section -->
+            <h2>Trending Music</h2>
+            <div class="cards">
+                <div class="card"><h3>Trending Songs</h3></div>
+                <div class="card"><h3>Top Albums</h3></div>
+                <div class="card"><h3>Popular Playlists</h3></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
