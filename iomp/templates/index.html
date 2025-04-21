@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Music Recommendation System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+        body::before {
+            content: "";
+            background: url("https://tse3.mm.bing.net/th?id=OIP.8QnMNWZmPgiUJzJflmF5twHaEP&pid=Api&P=0&h=220") no-repeat center center/cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.35;
+            z-index: -1;
+        }
+        .song-card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="max-w-3xl mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-4 text-center text-blue-800">🎵 Music Recommendation System</h1>
+        <div class="bg-white rounded-xl shadow-lg p-6 space-y-4">
+            <input type="text" id="songInput" placeholder="Enter a song name (optional)" class="w-full p-3 border border-gray-300 rounded-lg" />
+            <div class="flex flex-col sm:flex-row gap-4">
+                <select id="moodSelect" class="flex-1 p-3 border border-gray-300 rounded-lg">
+                    <option value="">Select Mood</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Energetic">Energetic</option>
+                    <option value="Calm">Calm</option>
+                </select>
+                <select id="genreSelect" class="flex-1 p-3 border border-gray-300 rounded-lg">
+                    <option value="">Select Genre</option>
+                    <!-- Populated by JS -->
+                </select>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <button onclick="getRecommendations()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"> Get Recommendations</button>
+                <button onclick="filterSongs()" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"> Filter Songs</button>
+                <button onclick="clearFilters()" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition"> Clear</button>
+            </div>
+        </div>
+        <div id="results" class="mt-6 space-y-4 text-black"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
